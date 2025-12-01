@@ -1,0 +1,60 @@
+.btn-primary {
+    border-width: 0.2rem !important;
+}
+
+:root {
+    --accent: #5bd6ec;
+    --container-max: 960px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    border: 5px solid var(--accent);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top header */
+.top {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.top h1 {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+/* Rely on Bootstrap for grid & spacing; keep small helpers */
+.container {
+    max-width: var(--container-max);
+}
+
+.form-control {
+    font-size: 1rem;
+}
+
+.footer .botom,
+.footer .bottom {
+    font-size: 0.9rem;
+}
+
+label > input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+/* Ensure the rules paragraph never exceeds the width of the surrounding .midle container
+   and force breaks for very long words without spaces. */
+.midle .consignes p {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}

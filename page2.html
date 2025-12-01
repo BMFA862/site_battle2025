@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-120">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="cle.ico" type="image/x-icon">
+    <title>Battle 2025</title>
+</head>
+
+<body class="d-flex flex-column h-120">
+    <div class="top container mt-3 text-center bg-primary text-white rounded-3">
+    <H1>Inscription battle de chant</H1>
+    </div>
+    <div class="container my-4 flex-shrink-0">
+        <form action="https://formspree.io/f/xvgerojy" method="POST">
+            <div class="mb-3">
+                <label for="zone1" class="form-label">Nom :</label>
+                <input type="text" class="form-control" id="zone1" name="nom" placeholder="Entrez votre nom">
+            </div>
+
+            <div class="mb-3">
+                <label for="zone2" class="form-label">Prénom*:</label>
+                <input type="text" class="form-control" id="zone2" name="prenom" placeholder="Entrez votre prénom*" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="zone3" class="form-label">Email :</label>
+                <input type="email" class="form-control" id="zone3" name="email" placeholder="Entrez votre email">
+            </div>
+
+            <div class="mb-3">
+                <label for="zone4" class="form-label">Numéro de téléphone*:</label>
+                <input type="tel" class="form-control" id="zone4" name="phone" placeholder="Entrez votre numéro de téléphone*" required>
+            </div>
+
+            <div class="mb-3 text-danger">
+                <p class="mb-0">* Champs obligatoires</p>
+            </div>
+
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="consent1" name="checkbox" required>
+                <label class="form-check-label" for="consent1">J'ai lu et j'accepte <a href="page4.html" target="_blank" rel="noopener noreferrer">le traitement de mes données personnelles</a>.</label>
+            </div>
+
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="consent2" name="checkbox2" required>
+                <label class="form-check-label" for="consent2">J'atteste sur l'honneur l'exactitude des informations saisies et je m'engage à être présent(e).</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">S'inscrire</button>
+            <a href="index.html" class="btn btn-secondary ms-2">Retour</a>
+        </form>
+    </div>
+    <footer class="footer mt-auto py-3 bg-light text-center">
+        <div class="botom container">
+            © 2025 Lycée Maurice Genevoix - Réalisé par Benj'piano et le club musique.
+        </div>
+    </footer>
+</body>
+
+</html>
