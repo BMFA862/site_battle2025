@@ -48,6 +48,15 @@ label > input[type="checkbox"] {
     margin-right: 0.5rem;
 }
 
+/* Style for disabled signup button */
+#signupBtn.disabled {
+    background-color: #adabab !important;
+    color: #000000 !important;
+    border-color: #adabab !important;
+    cursor: not-allowed !important;
+    opacity: 0.6;
+}
+
 /* Ensure the rules paragraph never exceeds the width of the surrounding .midle container
    and force breaks for very long words without spaces. */
 .midle .consignes p {
