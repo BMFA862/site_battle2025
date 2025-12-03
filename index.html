@@ -14,8 +14,13 @@
     </div>
     <div class="midle container my-4">
         <div class="text-center mb-4">
-            <a href="page2.html" class="btn btn-primary">S'inscrire</a>
+            <a id="signupBtn" class="btn btn-primary disabled" aria-disabled="true" href="#" role="button">S'inscrire</a>
         </div>
+        <br>
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="consent1" name="checkbox" required>
+                <label class="form-check-label" for="consent1">J'ai lu et je m'engage à respecter le règlement.</label>
+            </div>
         <br><br>
         <div class="consignes">
             <h5>Information :</h5>
@@ -26,7 +31,7 @@
             </strong>
             </p>
             <br>
-            <h5>Règles du jeu :</h5>
+            <h5>Règlement :</h5>
             <p>
                 Les insultes sont interdites, tout comme les propos à caractère raciste, sexiste ou homophobe.
                 Les points seront attribués par le public et monsieur bauchet arbitrant les battles
@@ -38,5 +43,41 @@
             © 2025 Lycée Maurice Genevoix - Réalisé par Benj'piano et le club musique. Nous contacter : <a href="">club-musique-maurice-genevoix@tutamail.com</a>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const checkbox = document.getElementById('consent1');
+            const signup = document.getElementById('signupBtn');
+
+            function update() {
+                if (checkbox && signup) {
+                    if (checkbox.checked) {
+                        signup.classList.remove('disabled');
+                        signup.setAttribute('href', 'page2.html');
+                        signup.setAttribute('aria-disabled', 'false');
+                        signup.tabIndex = 0;
+                    } else {
+                        signup.classList.add('disabled');
+                        signup.setAttribute('href', '#');
+                        signup.setAttribute('aria-disabled', 'true');
+                        signup.tabIndex = -1;
+                    }
+                }
+            }
+
+            if (signup) {
+                signup.addEventListener('click', function (e) {
+                    if (signup.getAttribute('aria-disabled') === 'true') {
+                        e.preventDefault();
+                    }
+                });
+            }
+
+            if (checkbox) {
+                checkbox.addEventListener('change', update);
+            }
+
+            update();
+        });
+    </script>
 </body>
 </html>
